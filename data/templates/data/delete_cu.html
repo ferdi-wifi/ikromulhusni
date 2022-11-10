@@ -1,0 +1,19 @@
+{% extends "data/main.html" %}
+{% block content %}
+<br>
+<div class ="container-fluid">
+    <div class ="row justify-content-md-center">
+        <div class ="col-md-8">
+            <div class ="card card-body">
+                <p> Yakin Ingin Menghapus "{{datacustomerdelete}}"  ?</p>
+                    <form action ="" method ="POST">
+                        {% csrf_token %}
+                        <br>
+                        <a class ="btn btn-danger" href="{% url 'home' %}" role="button">Batal</a>
+                        <input type ="submit" class="btn btn-primary" name="Konfirmasi"/>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
